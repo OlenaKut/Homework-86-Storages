@@ -66,14 +66,16 @@
       }
 
       function addToStorage() {
-        sessionStorage.setItem(0, [...info]);
-        localStorage.setItem(0, [...info]);
+        sessionStorage.setItem(0, [...info].join(", "));
+        localStorage.setItem(0, [...info].join(", "));
         console.log(sessionStorage);
         console.log(localStorage);
       }
       function getFromStorage() {
-        console.log(localStorage.getItem(0));
-        console.log(sessionStorage.getItem(0));
+        console.log(`The Local Storage contains: ${localStorage.getItem(0)}`);
+        console.log(
+          `The Session Storage contains: ${sessionStorage.getItem(0)}`
+        );
       }
     </script>
     <script
